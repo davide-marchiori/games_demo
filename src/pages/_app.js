@@ -7,11 +7,11 @@ export default App;
 
 function App({ Component, pageProps }) {
   const [, setUser] = useState(null);
-  
+
   useEffect(() => {
     // on initial load set default user
-    localStorage.setItem("user", JSON.stringify({"username":"John Doe"}));
-    setUser({"username":"John Doe"});
+    localStorage.setItem("user", JSON.stringify({ username: "John Doe" }));
+    setUser({ username: "John Doe" });
   }, []);
 
   return (
@@ -25,6 +25,12 @@ function App({ Component, pageProps }) {
           content="Web app for training strategic skills"
         />
         <title>Strategic Training App</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          sizes="any"
+          href="image/favicon.ico"
+        />
       </Head>
 
       <div className="flex flex-col h-screen justify-between">
